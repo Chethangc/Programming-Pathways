@@ -1,2 +1,2 @@
-# coding-langauge-learning
-This repository is coding language learning,
+# Java coding-langauge-learning
+This repository is Java coding language learning,
