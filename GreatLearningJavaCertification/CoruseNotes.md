@@ -284,6 +284,7 @@ inner for loop execution times is outer for loop execution * inner for loop exec
 
 
 ## Arrays in Java
+### Single Dimension 
 Helps to store multiple elements of the same data type in java.  
 Variable can store only one element.
 Multiple elements in same storage space.
@@ -305,8 +306,110 @@ a[4] = 'e'
 for(int i=0; i<5; i++){
 System.out.println(a[i]);
 }
+
+//Assigning the value to the Array using forloop
+int[] b= new int[10];
+
+for(int i=1; i<=10; i++){
+a[i-1] = i;
+}
+//store 1-10
+```
+Adding two arrays:
+```java
+int[] a= new int[5];
+int[] b= new int[5];
+int[] c= new int[5];
+int num=5;
+
+for(int i=0; i<5; i++){
+a[i] = i;
+b[i] = num;
+++num;
+c[i] = a[i]+b[i]
+System.out.println(c[i]);
+}
 ```
 
+### Multi Dimension Array
+Consists rows and coloumns
+Array a (2x2) a[0][0], a[1][0], a[0][1] a[1][1]
+
+```java
+int[][] a = new int[3][3];
+int num = 1
+for(int i=0; i<3; i++){
+for(int j=0;j<3;j++){
+a[i][j] = num;
+++num;
+}
+}
+
+for(int i=0; i<3; i++){
+for(int j=0;j<3;j++){
+System.out.println(a[i][j]);
+}
+System.out.println("");
+}
+```
 ## Functions in Java
 
-Function in real life.
+Function in real life is the task that that we do.
+Like eating, running, cycling.
+
+Function is block of code that performs a specific action/task.
+Ex:
+Deposit - Deposit money.
+Withdraw - Withdraw money
+Balance - Check the balance.
+
+Induvidial Function
+```java
+public static void main(String[] args){
+callchethan(); //Calling
+add(10,20);
+
+//Return
+Test project = new Test();
+int result;
+result = project.add(10,20);
+System.out.println(result);
+}
+//non-parameterized function
+//Defination
+public static void callchethan(){
+System.out.println("Call Chethan");
+}
+//parameterized function
+//Defination
+public static void add(int num1, int num2){
+System.out.println(num1+num2);
+}
+// non-static Function
+public int add(int num1, int num2){
+return num1+num2;
+}
+
+```
+Swapping Function
+```java
+public static void swapFunction(int a, int b){
+System.out.println("Before swapping, a= "+a+"b="+b);
+int temp;
+temp=a;
+a=b;
+b=temp;
+System.out.println("Before swapping, a= "+a+"b="+b);
+}
+```
+Method Overloading
+```java
+public static int area(int n1, int n2){
+return n1*n2; // Rectangle
+}
+public static float area(int n){
+return 3.14f*n*n; // Circle
+}
+```
+Methods having same but different in parameters or return type.
+Main function is starting and ending of the program.
